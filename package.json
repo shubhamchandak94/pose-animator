@@ -2,7 +2,7 @@
   "name": "tfjs-models",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "license": "Apache-2.0",
   "private": true,
   "engines": {
@@ -28,10 +28,12 @@
     "dat.gui": "^0.7.2",
     "eslint": "^4.19.1",
     "eslint-config-google": "^0.9.1",
-    "yalc": "~1.0.0-pre.27"
+    "yalc": "~1.0.0-pre.27",
+    "express": "^4.15.2"
   },
   "scripts": {
-    "start": "parcel index.html --open --no-source-maps"
+    "build": "parcel build index.html --no-source-maps",
+    "start": "npm run build && node server.js"
   },
   "browser": {
     "crypto": false
